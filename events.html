@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | Open Doors Foundation</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .event-card {
+            display: flex;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+            transition: var(--transition);
+        }
+        .event-card:hover {
+            transform: translateY(-5px);
+        }
+        .event-date {
+            background: var(--primary-navy);
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 100px;
+            text-align: center;
+        }
+        .event-date .day {
+            font-size: 2rem;
+            font-weight: 700;
+            font-family: var(--font-heading);
+        }
+        .event-date .month {
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        .event-details {
+            padding: 25px;
+            flex: 1;
+        }
+        .event-meta {
+            display: flex;
+            gap: 20px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        .event-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .event-meta i {
+            color: var(--primary-gold);
+        }
+        @media (max-width: 768px) {
+            .event-card {
+                flex-direction: column;
+            }
+            .event-date {
+                flex-direction: row;
+                gap: 10px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-church"></i> Open Doors
+            </a>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="leadership.html">Leadership</a></li>
+                <li><a href="ministries.html">Ministries</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="events.html" class="active">Events</a></li>
+                <li><a href="sermons.html">Sermons</a></li>
+                <li><a href="contact.html" class="btn-nav">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header" style="background-image: url('/placeholder.svg?height=600&width=1920'); background-size: cover; background-position: center; padding: 100px 0; text-align: center; color: white; position: relative;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(20, 33, 61, 0.7);"></div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <h1>Upcoming Events</h1>
+            <p>Join us for fellowship, worship, and community outreach.</p>
+        </div>
+    </header>
+
+    <section class="section bg-sand">
+        <div class="container">
+            
+            <!-- Event 1 -->
+            <div class="event-card">
+                <div class="event-date">
+                    <span class="day">24</span>
+                    <span class="month">Dec</span>
+                </div>
+                <div class="event-details">
+                    <h3>Christmas Eve Candlelight Service</h3>
+                    <div class="event-meta">
+                        <span><i class="far fa-clock"></i> 6:00 PM - 8:00 PM</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Main Sanctuary</span>
+                    </div>
+                    <p>Join us for a beautiful evening of carols, scripture reading, and a message of hope as we celebrate the birth of our Savior.</p>
+                </div>
+            </div>
+
+            <!-- Event 2 -->
+            <div class="event-card">
+                <div class="event-date">
+                    <span class="day">31</span>
+                    <span class="month">Dec</span>
+                </div>
+                <div class="event-details">
+                    <h3>New Year's Eve Watch Night</h3>
+                    <div class="event-meta">
+                        <span><i class="far fa-clock"></i> 9:00 PM - 12:00 AM</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Main Sanctuary</span>
+                    </div>
+                    <p>Ring in the New Year with prayer, worship, and thanksgiving. Let's dedicate the coming year to the Lord together.</p>
+                </div>
+            </div>
+
+            <!-- Event 3 -->
+            <div class="event-card">
+                <div class="event-date">
+                    <span class="day">15</span>
+                    <span class="month">Jan</span>
+                </div>
+                <div class="event-details">
+                    <h3>Community Outreach Day</h3>
+                    <div class="event-meta">
+                        <span><i class="far fa-clock"></i> 9:00 AM - 2:00 PM</span>
+                        <span><i class="fas fa-map-marker-alt"></i> City Park</span>
+                    </div>
+                    <p>We are heading out to serve our city! Join us as we distribute food, clothes, and share the love of Christ with our neighbors.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <h3>Open Doors</h3>
+                <p>A place of love, hope, and open doors for all.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="ministries.html">Ministries</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Faith Avenue, Cityville</p>
+                <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> info@opendoors.org</p>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2025 Open Doors Foundation. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+</html>
